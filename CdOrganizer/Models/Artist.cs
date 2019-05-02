@@ -35,6 +35,21 @@ namespace CdOrganizer.Models
     {
       _instances.Clear();
     }
+    public static Artist Find(int searchId)
+    {
+      return _instances[searchId-1];
+    }
+
+    public List<CD> GetCD()
+    {
+      return _CD;
+    }
+
+    public void AddCD(CD cd)
+    {
+      _CD.Add(cd);
+    }
+
 
   }
 }
