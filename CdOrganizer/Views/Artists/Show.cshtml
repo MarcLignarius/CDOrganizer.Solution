@@ -1,0 +1,12 @@
+<h3>Here are all the cds for this artist:</h3>
+
+<ol>
+@foreach (var cd in @Model["cd"])
+{
+  <li><a href='/artists/@Model["artist"].GetId()/cd/@cd.GetId()'>@cd.GetTitle()</a></li>
+}
+</ol>
+
+<p><a href='/artists/@Model["artist"].GetId()/cd/new'>Add a new cd</a></p>
+<p><a href='/artists'>Return to artist list</a></p>
+<p><a href='/'>Return to Main Page</a></p>
