@@ -7,7 +7,7 @@ namespace CdOrganizer.Controllers
     public class CDsController : Controller
     {
 
-        [HttpGet("/")]
+        [HttpGet("/cd")]
         public ActionResult Index()
         {
             List<CD> allCds = CD.GetAll(); //Makes Index_HasCorrectModelType_CDList() pass
